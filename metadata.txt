@@ -1,0 +1,31 @@
+[general]
+
+name=Road Inspection Viewer
+
+description=Plugin displaying photos from road inspection.
+
+about=One assumes that the QGIS layer has continuous ids of points. The points has "file_names" field of photo file names<br>
+ that are separated with semicolons. The plugin can be started by a button with its icon on the plugin toolbar.<br>
+ You should first set a path to photos folder ("path" button).<br>
+ If in road inspection are more than one photo per point, You can add an extra windows ("extra window" button).<br>
+ You can check the plugin by using the example from "example" subfolder of the plugin folder.
+ Remember to select a layer with a road inspection and a start point first.
+ 
+ 
+version=1.2.1
+qgisMinimumVersion=3.0
+
+category=Plugins
+icon=img/riv_ico.png
+
+author=Piotr Michałowski, Olsztyn, woj. W-M, Poland
+email=piotrm35@hotmail.com
+
+homepage=https://github.com/piotrm35/road_inspection_viewer
+repository=https://github.com/piotrm35/road_inspection_viewer
+tracker=https://github.com/piotrm35/road_inspection_viewer/issues
+
+experimental=False
+deprecated=False
+tags=road, inspection, photo, viewer
+
