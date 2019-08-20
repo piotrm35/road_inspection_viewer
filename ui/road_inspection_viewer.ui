@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>images/riv_ico.png</normaloff>images/riv_ico.png</iconset>
+    <normaloff>../img/riv_ico.png</normaloff>../img/riv_ico.png</iconset>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="Path_pushButton">
