@@ -12,7 +12,7 @@ about=One assumes that the QGIS layer has continuous ids of points. The points h
  Remember to select a layer with a road inspection and a start point first.
  
  
-version=1.2.1
+version=1.2.2
 qgisMinimumVersion=3.0
 
 category=Plugins

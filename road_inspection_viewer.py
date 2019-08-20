@@ -20,7 +20,7 @@
 
 SCRIPT_TITLE = 'Road Inspection Viewer'
 SCRIPT_NAME = 'road_inspection_viewer'
-SCRIPT_VERSION = '1.2.1'
+SCRIPT_VERSION = '1.2.2'
 GENERAL_INFO = u"""
 author: Piotr Michałowski, Olsztyn, woj. W-M, Poland
 piotrm35@hotmail.com
