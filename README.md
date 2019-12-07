@@ -10,6 +10,9 @@ You should first set a path to photos folder ("path" button).
 If in road inspection are more than one photo per point, You can add an extra windows ("extra window" button).
 You can check the plugin by using the example from "example" subfolder of the plugin folder.
 Remember to select a layer with a road inspection and a start point first.
+
+If You want to see geotagged photos on a map and inspect them by this plugin take a look 
+in my Github repository: https://github.com/piotrm35/EXIF_parser
  
 # License:
 GNU General Public License, version 2

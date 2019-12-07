@@ -11,8 +11,11 @@ about=One assumes that the QGIS layer has continuous ids of points. The points h
  You can check the plugin by using the example from "example" subfolder of the plugin folder.
  Remember to select a layer with a road inspection and a start point first.
  
+ If You want to see geotagged photos on a map and inspect them by this plugin take a look 
+ in my Github repository: https://github.com/piotrm35/EXIF_parser
  
-version=1.2.2
+ 
+version=1.2.3
 qgisMinimumVersion=3.0
 
 category=Plugins
@@ -27,5 +30,5 @@ tracker=https://github.com/piotrm35/road_inspection_viewer/issues
 
 experimental=False
 deprecated=False
-tags=road, inspection, photo, viewer
+tags=road, inspection, geotag, geotagged, photo, viewer
 

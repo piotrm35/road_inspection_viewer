@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 /***************************************************************************
   road_inspection_viewer.py
@@ -20,7 +18,7 @@
 
 SCRIPT_TITLE = 'Road Inspection Viewer'
 SCRIPT_NAME = 'road_inspection_viewer'
-SCRIPT_VERSION = '1.2.2'
+SCRIPT_VERSION = '1.2.3'
 GENERAL_INFO = u"""
 author: Piotr Michałowski, Olsztyn, woj. W-M, Poland
 piotrm35@hotmail.com
@@ -129,6 +127,8 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
             self.path_to_photos = photos_folder
             self.Path_pushButton.setText('path')
             self._set_buttons_enebled_to_state_ready()
+            file_names = self.get_first_selected_point_file_names()
+            self.show_photos_list(file_names)
             
     def Play_back_handleButton(self):
         self.Play_back_pushButton.setEnabled(False)
