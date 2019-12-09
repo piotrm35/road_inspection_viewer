@@ -12,7 +12,7 @@ You can check the plugin by using the example from "example" subfolder of the pl
 Remember to select a layer with a road inspection and a start point first.
 
 If You want to see geotagged photos on a map and inspect them by this plugin take a look 
-in my Github repository: https://github.com/piotrm35/EXIF_parser
+in my EXIF_parser Github repository.
  
 # License:
 GNU General Public License, version 2

@@ -12,7 +12,7 @@ about=One assumes that the QGIS layer has continuous ids of points. The points h
  Remember to select a layer with a road inspection and a start point first.
  
  If You want to see geotagged photos on a map and inspect them by this plugin take a look 
- in my Github repository: https://github.com/piotrm35/EXIF_parser
+ in my EXIF_parser Github repository.
  
  
 version=1.2.3
