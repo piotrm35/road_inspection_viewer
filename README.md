@@ -11,8 +11,9 @@ If in road inspection are more than one photo per point, You can add an extra wi
 You can check the plugin by using the example from "example" subfolder of the plugin folder.
 Remember to select a layer with a road inspection and a start point first.
 
-If You want to see geotagged photos on a map and inspect them by this plugin take a look 
-in my EXIF_parser Github repository.
+If You want to see geotagged photos on a map and inspect them by this plugin take a look in my EXIF_parser Github repository.
+
+If You want to make a very basic road inspection, to see it on a map and inspect by this plugin - take a look in my Aida_data_parser Github repository.
  
 # License:
 GNU General Public License, version 2

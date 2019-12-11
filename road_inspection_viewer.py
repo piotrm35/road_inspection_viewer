@@ -18,7 +18,7 @@
 
 SCRIPT_TITLE = 'Road Inspection Viewer'
 SCRIPT_NAME = 'road_inspection_viewer'
-SCRIPT_VERSION = '1.2.3'
+SCRIPT_VERSION = '1.2.4'
 GENERAL_INFO = u"""
 author: Piotr Michałowski, Olsztyn, woj. W-M, Poland
 piotrm35@hotmail.com
@@ -83,6 +83,7 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
         self.Delay_pushButton.setText('delay: ' + str(self.delay) + ' ms')
         # buttons' handling:
         self.Path_pushButton.clicked.connect(self.Path_handleButton)
+        self.Show_pushButton.clicked.connect(self.Show_handleButton)
         self.Play_back_pushButton.clicked.connect(self.Play_back_handleButton)
         self.Back_pushButton.clicked.connect(self.Back_handleButton)
         self.Stop_pushButton.clicked.connect(self.Stop_handleButton)
@@ -101,6 +102,7 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
         self.Stop_handleButton()
         # buttons' handling:
         self.Path_pushButton.clicked.disconnect(self.Path_handleButton)
+        self.Show_pushButton.clicked.disconnect(self.Show_handleButton)
         self.Play_back_pushButton.clicked.disconnect(self.Play_back_handleButton)
         self.Back_pushButton.clicked.disconnect(self.Back_handleButton)
         self.Stop_pushButton.clicked.disconnect(self.Stop_handleButton)
@@ -129,6 +131,10 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
             self._set_buttons_enebled_to_state_ready()
             file_names = self.get_first_selected_point_file_names()
             self.show_photos_list(file_names)
+
+    def Show_handleButton(self):
+        file_names = self.get_first_selected_point_file_names()
+        self.show_photos_list(file_names)
             
     def Play_back_handleButton(self):
         self.Play_back_pushButton.setEnabled(False)
@@ -210,6 +216,7 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
 
     def _set_buttons_enebled_to_state_start(self):
         self.Path_pushButton.setEnabled(True)
+        self.Show_pushButton.setEnabled(False)
         self.Play_back_pushButton.setEnabled(False)
         self.Back_pushButton.setEnabled(False)
         self.Stop_pushButton.setEnabled(False)
@@ -221,6 +228,7 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
 
     def _set_buttons_enebled_to_state_ready(self):
         self.Path_pushButton.setEnabled(True)
+        self.Show_pushButton.setEnabled(True)
         self.Play_back_pushButton.setEnabled(True)
         self.Back_pushButton.setEnabled(True)
         self.Stop_pushButton.setEnabled(False)
@@ -232,6 +240,7 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
 
     def _set_buttons_enebled_to_state_play(self):
         self.Path_pushButton.setEnabled(False)
+        self.Show_pushButton.setEnabled(False)
         self.Play_back_pushButton.setEnabled(False)
         self.Back_pushButton.setEnabled(True)
         self.Stop_pushButton.setEnabled(True)

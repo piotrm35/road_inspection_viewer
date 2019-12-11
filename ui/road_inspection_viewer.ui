@@ -29,7 +29,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -40,9 +40,9 @@
    <widget class="QPushButton" name="Play_back_pushButton">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>90</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -53,9 +53,9 @@
    <widget class="QPushButton" name="Back_pushButton">
     <property name="geometry">
      <rect>
-      <x>100</x>
+      <x>135</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -66,9 +66,9 @@
    <widget class="QPushButton" name="Stop_pushButton">
     <property name="geometry">
      <rect>
-      <x>150</x>
+      <x>180</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -79,9 +79,9 @@
    <widget class="QPushButton" name="Forward_pushButton">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>225</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -92,9 +92,9 @@
    <widget class="QPushButton" name="Play_forward_pushButton">
     <property name="geometry">
      <rect>
-      <x>250</x>
+      <x>270</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -105,9 +105,9 @@
    <widget class="QPushButton" name="Delay_pushButton">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>315</x>
       <y>0</y>
-      <width>95</width>
+      <width>85</width>
       <height>23</height>
      </rect>
     </property>
@@ -118,9 +118,9 @@
    <widget class="QPushButton" name="Save_pushButton">
     <property name="geometry">
      <rect>
-      <x>400</x>
+      <x>405</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -133,7 +133,7 @@
      <rect>
       <x>450</x>
       <y>0</y>
-      <width>95</width>
+      <width>85</width>
       <height>23</height>
      </rect>
     </property>
@@ -144,9 +144,9 @@
    <widget class="QPushButton" name="About_pushButton">
     <property name="geometry">
      <rect>
-      <x>550</x>
+      <x>540</x>
       <y>0</y>
-      <width>45</width>
+      <width>40</width>
       <height>23</height>
      </rect>
     </property>
@@ -168,6 +168,19 @@
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Show_pushButton">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>0</y>
+      <width>40</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string notr="true">show</string>
     </property>
    </widget>
   </widget>
