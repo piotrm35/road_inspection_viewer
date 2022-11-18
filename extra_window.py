@@ -40,6 +40,7 @@ class extra_window(QtWidgets.QMainWindow):
         self.resize(self.parent.width(), self.parent.height())
         self.Save_pushButton.clicked.connect(self.Save_handleButton)
         self.Set_parent_size_pushButton.clicked.connect(self.Set_parent_size_handleButton)
+        self.current_img_file_name = None
 
     def  __del__(self):
         self.Save_pushButton.clicked.disconnect(self.Save_handleButton)
@@ -56,7 +57,10 @@ class extra_window(QtWidgets.QMainWindow):
 
     def Save_handleButton(self):
         if self.raw_image:
-            path_to_file_tuple = QtWidgets.QFileDialog.getSaveFileName(self, 'Save photo', self.parent.save_path, '*.jpg')
+            if self.current_img_file_name:
+                path_to_file_tuple = QtWidgets.QFileDialog.getSaveFileName(self, 'Save photo', os.path.join(self.parent.save_path, self.current_img_file_name), '*.jpg')
+            else:
+                path_to_file_tuple = QtWidgets.QFileDialog.getSaveFileName(self, 'Save photo', self.parent.save_path, '*.jpg')
             if path_to_file_tuple and len(path_to_file_tuple) >= 1:
                 self.raw_image.save(path_to_file_tuple[0])
                 self.parent.save_path = os.path.dirname(unicode(path_to_file_tuple[0]))

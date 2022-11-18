@@ -18,7 +18,7 @@
 
 SCRIPT_TITLE = 'Road Inspection Viewer'
 SCRIPT_NAME = 'road_inspection_viewer'
-SCRIPT_VERSION = '1.2.4'
+SCRIPT_VERSION = '1.2.5'
 GENERAL_INFO = u"""
 author: Piotr Michałowski, Olsztyn, woj. W-M, Poland
 piotrm35@hotmail.com
@@ -57,6 +57,7 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
         self.list_of_extra_windows = []
         self.extra_windows_max_number = 0
         self.p_thread = None
+        self.current_img_file_name = None
 
         
     def closeEvent(self, event):        # overriding the method
@@ -188,7 +189,10 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
 
     def Save_handleButton(self):
         if self.raw_image:
-            path_to_file_tuple = QtWidgets.QFileDialog.getSaveFileName(self, 'Save photo', self.save_path, '*.jpg')
+            if self.current_img_file_name:
+                path_to_file_tuple = QtWidgets.QFileDialog.getSaveFileName(self, 'Save photo', os.path.join(self.save_path, self.current_img_file_name), '*.jpg')
+            else:
+                path_to_file_tuple = QtWidgets.QFileDialog.getSaveFileName(self, 'Save photo', self.save_path, '*.jpg')
             if path_to_file_tuple and len(path_to_file_tuple) >= 1:
                 self.raw_image.save(path_to_file_tuple[0])
                 self.save_path = os.path.dirname(unicode(path_to_file_tuple[0]))
@@ -326,8 +330,10 @@ class road_inspection_viewer(QtWidgets.QMainWindow):
             if file_name and os.path.exists(os.path.join(self.path_to_photos, file_name)):
                 image = QtGui.QImage(os.path.join(self.path_to_photos, file_name))
                 window.set_and_show_raw_image(image)
+                window.current_img_file_name = file_name
             else:
                 window.set_and_show_raw_image(self.no_file_image)
+                window.current_img_file_name = None
 
     def set_and_show_raw_image(self, image):
         self.raw_image = image
