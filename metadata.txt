@@ -15,7 +15,7 @@ about=One assumes that the QGIS layer has continuous ids of points. The points h
  
  If You want to make a very basic road inspection, to see it on a map and inspect by this plugin - take a look in my Aida_data_parser Github repository.
  
-version=1.2.4
+version=1.2.5
 qgisMinimumVersion=3.0
 
 category=Plugins
